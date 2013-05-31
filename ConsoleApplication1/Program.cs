@@ -27,19 +27,19 @@ namespace ConsoleApplication1
         }
 
         //sabit regex 
-        public const string MahReg = "(( m[ ])|( m.[ ])|( mh[ ])|( mh.[ ])|( mah[ ])|( mah.[ ])|( mahalle.*[ ]))";
-        public const string SkReg = "(( s[ ])|( s.[ ])|( sk[ ])|( sk.[ ])|( sok[ ])|( sok.[ ])|( sokak[ ])|( sokağ.*[ ]))";
-        public const string AptReg = "(( a[ ])|( a.[ ])|( ap[ ])|( ap.[ ])|( apt[ ])|( apt.[ ])|( apart.*[ ]))";
-        public const string CadReg = "(( c[ ])|( c.[ ])|( cd[ ])|( cd.[ ])|( cad[ ])|( cad.[ ])|( cadde.*[ ]))";
-        public const string SiteReg = "(( st[ ])|( st.[ ])|( site.*[ ]))";
-        public const string BulvReg = "(( bl[ ])|( bl.[ ])|( bulv.*[ ]))";
+        public const string MahReg = "(( m[ ])|( m[. ])|( mh[ ])|( mh[. ])|( mah[ ])|( mah[. ])|( mahalle.*[ ]))";
+        public const string SkReg = "(( s[ ])|( s[. ])|( sk[ ])|( sk[. ])|( sok[ ])|( sok[. ])|( sokak[ ])|( sokağ.*[ ]))";
+        public const string AptReg = "(( a[ ])|( a[. ])|( ap[ ])|( ap[. ])|( apt[ ])|( apt[. ])|( apart.*[ ]))";
+        public const string CadReg = "(( c[ ])|( c[. ])|( cd[ ])|( cd[. ])|( cad[ ])|( cad[. ])|( cadde.*[ ]))";
+        public const string SiteReg = "(( st[ ])|( st[. ])|( site.*[ ]))";
+        public const string BulvReg = "(( bl[ ])|( bl[. ])|( bulv.*[ ]))";
         public const string NoReg = "(( n[.])|( n[.:])|( n[:])|( no[.])|( no[.:])|( no[:]))";
         public const string KatReg = "(( k[.])|( k[.:])|( k[:])|( kat[.])|( kat[.:])|( kat[:]))";
         public const string DaireReg = "(( d[.])|( d[.:])|( d[:])|( da[.])|( da[.:])|( da[:])|( daire[:]))";
 
         static void Main()
         {
-            const string addressStr = "İnceyol Sokağ Küçükyalı Evleri Sitesi Merkez Mah. Mustafa Bey Caddesi  Lale Apart.  No.36/1 KAT:1 Da:5 34000 Küçükyalı Maltpe İstambl  ";
+            const string addressStr = "İnceyol sk. Küçükyalı Evleri st Merkez m. Mektep Caddesi  Lale Apart.  No.36/1 K.1 Da:5 34000 Küçükyalı Maltpe İstambl  ";
             ParseAddress(addressStr);
         }
 
