@@ -39,7 +39,7 @@ namespace ConsoleApplication1
 
         static void Main()
         {
-            const string addressStr = "İnceyol sk. Küçükyalı Evleri st Merkez m. Mektep Caddesi  Lale Apart.  No.36/1 K.1 Da:5 34000 Küçükyalı Maltpe İstambl  ";
+            const string addressStr = "Lale Ap.  GMK Bulvarı İnceyol sk. Küçükyalı Evleri st Merkez m.   No.36/1 K.1 Da:5 Küçükyalı Maltpe İstambl  ";
             ParseAddress(addressStr);
         }
 
@@ -51,8 +51,8 @@ namespace ConsoleApplication1
 
             //kurala uyan kelimeler
             var rulledMatches = "";
-            var tmpMatch = "";
-            var wsSep = new string[] { " " };
+            const string tmpMatch = "";
+            var wsSep = new[] { " " };
 
             var dict = GetSearchDict(addressStr);
             var orderedDict = dict.OrderBy(x => x.Key);
@@ -110,7 +110,7 @@ namespace ConsoleApplication1
             
             //sadece sayılardan oluşuyorsa ve uzunluğu da 5 ise posta kodudur.
             var postalCode = cityDistrict.Where(s => (!s.Contains(".")) && (!s.Contains(":")) && s.All(Char.IsDigit) && s.Length == 5).ToList();
-            addr.PostaKodu = postalCode[0];
+            addr.PostaKodu = postalCode.Count > 0 ? postalCode[0] : "";
 
             foreach (var cityorDistrict in cityDistrictFinal)
             {
